@@ -7,7 +7,8 @@ const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Destinations', to: '/destinations' },
   { label: 'Offers', to: '/offers' },
-  { label: 'About', to: '/about' },
+  { label: 'Support', to: '/support' },
+  { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -32,7 +33,7 @@ function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}

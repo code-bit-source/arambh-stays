@@ -8,6 +8,8 @@ const footerSections = [
       { label: 'Destinations', to: '/destinations' },
       { label: 'Offers', to: '/offers' },
       { label: 'Support', to: '/support' },
+      { label: 'FAQ', to: '/faq' },
+      { label: 'Manage Bookings', to: '/manage-bookings' },
     ],
   },
   {
@@ -16,6 +18,7 @@ const footerSections = [
       { label: 'About Us', to: '/about' },
       { label: 'Careers', to: '/careers' },
       { label: 'Contact', to: '/contact' },
+      { label: 'Travel Guidelines', to: '/guidelines' },
     ],
   },
   {

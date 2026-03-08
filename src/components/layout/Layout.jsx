@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import Footer from './Footer'
@@ -7,6 +7,10 @@ import Navbar from './Navbar'
 function Layout({ children }) {
   const shellRef = useRef(null)
   const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   useLayoutEffect(() => {
     const target = shellRef.current
