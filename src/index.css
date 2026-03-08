@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-ivory: #FAF8F5;
+  --color-cream: #F5F0EB;
+  --color-warm: #EDE8E1;
+  --color-gold: #C6A96C;
+  --color-gold-dark: #A68B4B;
+  --color-charcoal: #1A1A1A;
+  --color-dark: #2D2D2D;
+  --color-muted: #6B6B6B;
+  --color-light-muted: #9A9A9A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* --- Utility Classes --- */
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+/* --- Scrollbar --- */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Loader --- */
+.loader-track {
+  margin-top: 1rem;
+  height: 2px;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.loader-strip {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--color-gold) 0%, #E8D5A8 100%);
+  transform-origin: left center;
+}
+
+/* --- Image Motion --- */
+.image-motion-shell {
+  transform-style: preserve-3d;
+  perspective: 900px;
+  overflow: hidden;
+}
+
+.image-motion-media {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* --- Card Hover Lift --- */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Elegant Divider --- */
+.divider-gold {
+  width: 48px;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+/* --- Button Styles --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: var(--color-charcoal);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--color-gold-dark);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: var(--color-charcoal);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-charcoal);
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: var(--color-charcoal);
+  color: #fff;
+}
+
+/* --- Form Inputs --- */
+input, textarea, select {
+  font-family: "Inter", sans-serif;
+}
